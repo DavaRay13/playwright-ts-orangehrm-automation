@@ -7,7 +7,6 @@ export class LoginPage {
   readonly loginButton: Locator;
   readonly errorMessage: Locator;
   readonly logoutLink: Locator;
-  // Ini yang lo minta: readonly property buat icon user
   readonly userDropdown: Locator;
 
   constructor(page: Page) {
@@ -18,7 +17,6 @@ export class LoginPage {
     this.errorMessage = page.locator('.oxd-alert-content-text');
     this.logoutLink = page.getByRole('menuitem', { name: 'Logout' });
     
-    // Inisialisasi locator spesifik ke 'manda User' di sini
     this.userDropdown = page.getByRole('listitem')
       .filter({ hasText: 'manda User' })
       .locator('i');
@@ -37,7 +35,6 @@ export class LoginPage {
   }
 
   async logout() {
-    // Karena udah di-set di constructor, tinggal panggil pake this
     await this.userDropdown.click();
     await this.logoutLink.click();
   }
