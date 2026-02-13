@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true, // Ini yang paling penting
+    "esModuleInterop": true,
+    "strict": true
+  }
+}

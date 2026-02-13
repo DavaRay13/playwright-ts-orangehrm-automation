@@ -1,0 +1,9 @@
+{
+  "validUsers": [
+    { "username": "Admin", "password": "admin123" }
+  ],
+  "invalidUsers": [
+    { "username": "Salah", "password": "salahPassword", "message": "Invalid credentials" },
+    { "username": "Admin", "password": "123", "message": "Invalid credentials" }
+  ]
+}
